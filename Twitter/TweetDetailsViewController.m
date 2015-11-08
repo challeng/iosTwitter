@@ -9,6 +9,8 @@
 #import "TweetDetailsViewController.h"
 #import "TwitterClient.h"
 #import "TweetsViewController.h"
+#import "User.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface TweetDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -23,7 +25,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Tweet";
-    // Do any additional setup after loading the view from its nib.
+    
+    self.nameLabel.text = self.tweet.user.name;
+    self.tweetLabel.text = self.tweet.text;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd/yy"];
+    NSString *stringFromDate = [formatter stringFromDate:self.tweet.createdAt];
+    self.timestampLabel.text = stringFromDate;
+    
+    [self.imageView setImageWithURL:[NSURL URLWithString:self.tweet.user.profileImageUrl]];
 }
 
 - (void)didReceiveMemoryWarning {
