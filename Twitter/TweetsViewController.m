@@ -12,6 +12,7 @@
 #import "Tweet.h"
 #import "TweetCell.h"
 #import <UIImageView+AFNetworking.h>
+#import "ComposeTweetViewController.h"
 
 @interface TweetsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -78,11 +79,8 @@
 }
 
 - (IBAction)onCompose:(id)sender {
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setValue:@"test tweet!!" forKey:@"status"];
-    [[TwitterClient sharedInstance] publishTweetWithParams:params completion:^(NSObject *tweet, NSError *error) {
-        
-    }];
+    ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

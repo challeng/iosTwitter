@@ -20,6 +20,8 @@
 		58441C3F1BEAC8E90080E26A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58441C3D1BEAC8E90080E26A /* LoginViewController.m */; };
 		58441C401BEAC8E90080E26A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58441C3E1BEAC8E90080E26A /* LoginViewController.xib */; };
 		58441C431BEAC9EC0080E26A /* TwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 58441C421BEAC9EC0080E26A /* TwitterClient.m */; };
+		58B478C11BEFDBFF001CDA10 /* ComposeTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B478BF1BEFDBFF001CDA10 /* ComposeTweetViewController.m */; };
+		58B478C21BEFDBFF001CDA10 /* ComposeTweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58B478C01BEFDBFF001CDA10 /* ComposeTweetViewController.xib */; };
 		AA148CAD684046408B060E3F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5351F39810708905ABD3C71F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,9 @@
 		58441C3E1BEAC8E90080E26A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		58441C411BEAC9EC0080E26A /* TwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClient.h; sourceTree = "<group>"; };
 		58441C421BEAC9EC0080E26A /* TwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClient.m; sourceTree = "<group>"; };
+		58B478BE1BEFDBFF001CDA10 /* ComposeTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeTweetViewController.h; sourceTree = "<group>"; };
+		58B478BF1BEFDBFF001CDA10 /* ComposeTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeTweetViewController.m; sourceTree = "<group>"; };
+		58B478C01BEFDBFF001CDA10 /* ComposeTweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeTweetViewController.xib; sourceTree = "<group>"; };
 		A5B1D8CEF2DAC58DBE3CBB96 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E8F51F4359D6AF1BB87176AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +134,9 @@
 				5817E4DC1BEF9D0600231372 /* TweetsViewController.h */,
 				5817E4DD1BEF9D0600231372 /* TweetsViewController.m */,
 				5817E4DE1BEF9D0600231372 /* TweetsViewController.xib */,
+				58B478BE1BEFDBFF001CDA10 /* ComposeTweetViewController.h */,
+				58B478BF1BEFDBFF001CDA10 /* ComposeTweetViewController.m */,
+				58B478C01BEFDBFF001CDA10 /* ComposeTweetViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 				5817E4E01BEF9D0600231372 /* TweetsViewController.xib in Resources */,
 				5817E4E51BEFA85F00231372 /* TweetCell.xib in Resources */,
 				58441C351BE9370F0080E26A /* LaunchScreen.storyboard in Resources */,
+				58B478C21BEFDBFF001CDA10 /* ComposeTweetViewController.xib in Resources */,
 				58441C321BE9370F0080E26A /* Assets.xcassets in Resources */,
 				58441C401BEAC8E90080E26A /* LoginViewController.xib in Resources */,
 			);
@@ -277,6 +286,7 @@
 				58441C431BEAC9EC0080E26A /* TwitterClient.m in Sources */,
 				58441C2A1BE9370F0080E26A /* AppDelegate.m in Sources */,
 				5817E4DB1BEEED3000231372 /* User.m in Sources */,
+				58B478C11BEFDBFF001CDA10 /* ComposeTweetViewController.m in Sources */,
 				5817E4D81BEEED1C00231372 /* Tweet.m in Sources */,
 				58441C271BE9370F0080E26A /* main.m in Sources */,
 				58441C3F1BEAC8E90080E26A /* LoginViewController.m in Sources */,
