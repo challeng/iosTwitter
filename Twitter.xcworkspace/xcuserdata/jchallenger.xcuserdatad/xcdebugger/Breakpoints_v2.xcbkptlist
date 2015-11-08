@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twitter/TweetsViewController.m"
-            timestampString = "468713137.220014"
+            timestampString = "468718344.743842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-fetchTweets"
             landmarkType = "5">
          </BreakpointContent>
@@ -185,11 +185,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twitter/TweetsViewController.m"
-            timestampString = "468713137.220014"
+            timestampString = "468718344.743842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "-onCompose:"
             landmarkType = "5">
          </BreakpointContent>
@@ -223,6 +223,38 @@
             startingLineNumber = "28"
             endingLineNumber = "28"
             landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Twitter/Tweet.m"
+            timestampString = "468718091.954151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-initWithDictionary:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Twitter/TweetsViewController.m"
+            timestampString = "468718342.792562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

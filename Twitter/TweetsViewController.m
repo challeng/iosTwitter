@@ -76,6 +76,8 @@
     cell.tweetLabel.text = tweet.text;
     cell.userName.text = tweet.user.name;
     
+    cell.favoriteCountLabel.text = [NSString stringWithFormat:@"%@ favorites", tweet.favoriteCount];
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM/dd/yy"];
     NSString *stringFromDate = [formatter stringFromDate:tweet.createdAt];

@@ -42,6 +42,13 @@
 }
 
 - (IBAction)onFavorite:(id)sender {
+    NSLog(@"Favorite tweet with id = %@", self.tweet.idString);
+    [[TwitterClient sharedInstance] favoriteTweetForId:self.tweet.idString completion:^(NSObject *tweet, NSError *error) {
+        if (tweet != nil) {
+            NSLog(@"favorited");
+        }
+    }];
+    
 }
 - (IBAction)onRetweet:(id)sender {
 }

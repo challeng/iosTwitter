@@ -15,6 +15,8 @@
     if (self) {
         self.user = [[User alloc] initWithDictionary:dictionary[@"user"]];
         self.text = dictionary[@"text"];
+        self.idString = dictionary[@"id_str"];
+        self.favoriteCount = dictionary[@"favorite_count"];
         
         NSString *createdAtString = dictionary[@"created_at"];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

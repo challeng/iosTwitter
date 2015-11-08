@@ -15,6 +15,8 @@
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, strong) User *user;
 @property (nonatomic, strong) NSURL *imageURL;
+@property (nonatomic, strong) NSString *idString;
+@property (nonatomic, strong) NSString *favoriteCount;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
