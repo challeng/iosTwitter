@@ -13,6 +13,7 @@
 #import "TweetCell.h"
 #import <UIImageView+AFNetworking.h>
 #import "ComposeTweetViewController.h"
+#import "TweetDetailsViewController.h"
 
 @interface TweetsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -62,6 +63,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TweetDetailsViewController *vc = [[TweetDetailsViewController alloc] init];
+    vc.tweet = self.tweets[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

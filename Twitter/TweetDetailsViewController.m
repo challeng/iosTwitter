@@ -11,6 +11,10 @@
 #import "TweetsViewController.h"
 
 @interface TweetDetailsViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *tweetLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 
 @end
 
@@ -18,12 +22,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Tweet";
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onFavorite:(id)sender {
+}
+- (IBAction)onRetweet:(id)sender {
+}
+- (IBAction)onReply:(id)sender {
 }
 
 /*

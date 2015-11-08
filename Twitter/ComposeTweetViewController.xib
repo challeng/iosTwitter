@@ -17,10 +17,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xay-8H-vMK">
+                <navigationBar alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xay-8H-vMK">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                     <animations/>
-                    <color key="backgroundColor" red="0.40220550840000002" green="0.57615037650000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="66" id="ms8-Ii-2G2"/>
                     </constraints>
