@@ -79,7 +79,7 @@
 
 - (IBAction)onCompose:(id)sender {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setValue:@"test tweet" forKey:@"status"];
+    [params setValue:@"test tweet!!" forKey:@"status"];
     [[TwitterClient sharedInstance] publishTweetWithParams:params completion:^(NSObject *tweet, NSError *error) {
         
     }];
