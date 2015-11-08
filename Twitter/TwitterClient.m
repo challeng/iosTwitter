@@ -76,6 +76,7 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         completion(nil, error);
+        NSLog(@	"TIMELINE ERROR: %@", error);
     }];
 }
 

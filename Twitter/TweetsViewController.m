@@ -49,6 +49,7 @@
     [self.refreshControl addTarget:self action:@selector(fetchTweets) forControlEvents:UIControlEventValueChanged];
     UITableViewController *dummyTableVC = [[UITableViewController alloc] init];
     dummyTableVC.tableView = self.tableView;
+    dummyTableVC.refreshControl = self.refreshControl;
 }
 
 - (void)setupTable {

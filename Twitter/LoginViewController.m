@@ -21,7 +21,6 @@
            // Modally present tweets view
             TweetsViewController *vc = [[TweetsViewController alloc] init];
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
-//            self.title = @"Home";
 
             [self presentViewController:navigationController animated:YES completion:nil];
         } else {
