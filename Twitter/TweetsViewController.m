@@ -26,14 +26,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupTable];
     [self fetchTweets];
-    
+    [self setupTable];
+    [self setUpRefreshControl];
+    [self setUpNavbar];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self fetchTweets];
+}
+
+- (void)setUpNavbar {
+    self.title = @"Home";
+    UIBarButtonItem *composeButton = [[UIBarButtonItem alloc] initWithTitle:@"Compose" style:UIBarButtonItemStylePlain target:self action:@selector(onCompose:)];
+    self.navigationItem.rightBarButtonItem = composeButton;
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(onLogout:)];
+    self.navigationItem.leftBarButtonItem = logoutButton;
+}
+
+- (void)setUpRefreshControl {
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchTweets) forControlEvents:UIControlEventValueChanged];
     UITableViewController *dummyTableVC = [[UITableViewController alloc] init];
     dummyTableVC.tableView = self.tableView;
-    dummyTableVC.refreshControl = self.refreshControl;
 }
 
 - (void)setupTable {
@@ -42,6 +57,10 @@
     self.tableView.estimatedRowHeight = 120;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:@"TweetCell" bundle:nil] forCellReuseIdentifier:@"TweetCell"];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,6 +85,10 @@
     return self.tweets.count;
 }
 
+- (void)reloadData {
+    [self fetchTweets];
+}
+
 - (void)fetchTweets {
     [[TwitterClient sharedInstance] homeTimelineWithParams:nil completion:^(NSArray *tweets, NSError *error) {
         self.tweets = tweets;
@@ -80,7 +103,8 @@
 
 - (IBAction)onCompose:(id)sender {
     ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] init];
-    [self presentViewController:vc animated:YES completion:nil];
+//    [self presentViewController:vc animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

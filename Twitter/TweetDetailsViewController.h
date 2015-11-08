@@ -1,5 +1,5 @@
 //
-//  TweetsViewController.h
+//  TweetDetailsViewController.h
 //  Twitter
 //
 //  Created by Jim Challenger on 11/8/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TweetsViewController : UIViewController
-
-- (void)reloadData;
+@interface TweetDetailsViewController : UIViewController
 
 @end

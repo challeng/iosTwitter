@@ -20,14 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIBarButtonItem *tweetButton = [[UIBarButtonItem alloc] initWithTitle:@"Tweet" style:UIBarButtonItemStylePlain target:self action:@selector(onTweet:)];
+    self.navigationItem.rightBarButtonItem = tweetButton;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-- (IBAction)onCancel:(id)sender {
-    [self toHome];
-}
+
+//- (IBAction)onCancel:(id)sender {
+//    [self toHome];
+//}
+
 - (IBAction)onTweet:(id)sender {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:self.textView.text forKey:@"status"];
@@ -37,8 +41,9 @@
 }
 
 - (void)toHome {
-    TweetsViewController *vc = [[TweetsViewController alloc] init];
-    [self presentViewController:vc animated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+//    TweetsViewController *vc = [[TweetsViewController alloc] init];
+//    [self presentViewController:vc animated:YES completion:nil];
 }
 
 /*

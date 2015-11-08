@@ -20,7 +20,10 @@
         if (user != nil) {
            // Modally present tweets view
             TweetsViewController *vc = [[TweetsViewController alloc] init];
-            [self presentViewController:vc animated:YES completion:nil];
+            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+//            self.title = @"Home";
+
+            [self presentViewController:navigationController animated:YES completion:nil];
         } else {
             // Present error view
         }

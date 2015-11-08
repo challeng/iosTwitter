@@ -17,57 +17,49 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="geb-hf-1qe">
-                    <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pqu-my-ozc">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                    <animations/>
-                    <color key="backgroundColor" red="0.40220550840606473" green="0.57615037650880252" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="66" id="UFq-Vd-N2o"/>
-                    </constraints>
-                    <items>
-                        <navigationItem title="Twitter" id="yyo-7r-Jqq" colorLabel="IBBuiltInLabel-Blue">
-                            <barButtonItem key="leftBarButtonItem" id="Wgz-gz-HPb">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zbl-i9-z1B">
-                                    <rect key="frame" x="16" y="29" width="48" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <animations/>
-                                    <state key="normal" title="Logout"/>
-                                    <connections>
-                                        <action selector="onLogout:" destination="-1" eventType="touchUpInside" id="onv-pb-29a"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" id="emN-62-IQL">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BxF-jp-VDi">
-                                    <rect key="frame" x="238" y="29" width="66" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <animations/>
-                                    <state key="normal" title="Compose"/>
-                                    <connections>
-                                        <action selector="onCompose:" destination="-1" eventType="touchUpInside" id="lfW-NE-wVZ"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="geb-hf-1qe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5lt-KF-Wpp"/>
-                <constraint firstItem="Pqu-my-ozc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8By-zB-DKU"/>
                 <constraint firstAttribute="trailing" secondItem="geb-hf-1qe" secondAttribute="trailing" id="OOZ-e3-eJl"/>
                 <constraint firstAttribute="bottom" secondItem="geb-hf-1qe" secondAttribute="bottom" id="P15-tM-wfr"/>
-                <constraint firstAttribute="trailing" secondItem="Pqu-my-ozc" secondAttribute="trailing" id="URV-c6-hD2"/>
-                <constraint firstItem="geb-hf-1qe" firstAttribute="top" secondItem="Pqu-my-ozc" secondAttribute="bottom" id="Ulw-ct-Qje"/>
-                <constraint firstItem="Pqu-my-ozc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c4s-bd-uyj"/>
+                <constraint firstItem="geb-hf-1qe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ks9-bZ-L6G"/>
             </constraints>
             <point key="canvasLocation" x="333" y="308"/>
         </view>
+        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pqu-my-ozc">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <animations/>
+            <color key="backgroundColor" red="0.40220550840606473" green="0.57615037650880252" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="height" constant="66" id="UFq-Vd-N2o"/>
+            </constraints>
+            <items>
+                <navigationItem title="Twitter" id="yyo-7r-Jqq" colorLabel="IBBuiltInLabel-Blue">
+                    <barButtonItem key="leftBarButtonItem" id="Wgz-gz-HPb">
+                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zbl-i9-z1B">
+                            <rect key="frame" x="16" y="29" width="48" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Logout"/>
+                        </button>
+                    </barButtonItem>
+                    <barButtonItem key="rightBarButtonItem" id="emN-62-IQL">
+                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BxF-jp-VDi">
+                            <rect key="frame" x="238" y="29" width="66" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Compose"/>
+                        </button>
+                    </barButtonItem>
+                </navigationItem>
+            </items>
+            <point key="canvasLocation" x="502" y="-35"/>
+        </navigationBar>
     </objects>
 </document>
