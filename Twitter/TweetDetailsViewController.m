@@ -60,6 +60,8 @@
 }
 - (IBAction)onReply:(id)sender {
     ReplyTweetViewController *vc = [[ReplyTweetViewController alloc] init];
+    vc.idString = self.tweet.idString;
+    vc.username = self.tweet.user.screename;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

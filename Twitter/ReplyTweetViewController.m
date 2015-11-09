@@ -7,6 +7,7 @@
 //
 
 #import "ReplyTweetViewController.h"
+#import "TwitterClient.h"
 
 @interface ReplyTweetViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textView;
@@ -20,6 +21,7 @@
     self.title = @"Reply";
     UIBarButtonItem *replyButton = [[UIBarButtonItem alloc] initWithTitle:@"Reply" style:UIBarButtonItemStylePlain target:self action:@selector(onReply:)];
     self.navigationItem.rightBarButtonItem = replyButton;
+    self.textView.text = [NSString stringWithFormat:@"@%@", self.username];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +31,16 @@
 
 - (IBAction)onReply:(id)sender {
     NSLog(@"Replying...");
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:self.idString forKey:@"in_reply_to_status_id"];
+    [params setValue:self.textView.text forKey:@"status"];
+    [[TwitterClient sharedInstance] replyTweetWithParams:params completion:^(NSObject *tweet, NSError *error) {
+        if (tweet != nil) {
+            NSLog(@"Replied");
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
 }
 
 /*

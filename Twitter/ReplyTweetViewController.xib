@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReplyTweetViewController">
             <connections>
                 <outlet property="textView" destination="Itm-2q-Mmq" id="Hg7-eZ-bAQ"/>
+                <outlet property="view" destination="xj3-gw-ubk" id="LyO-6N-6M8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -75,6 +75,7 @@
     
     cell.tweetLabel.text = tweet.text;
     cell.userName.text = tweet.user.name;
+    cell.screennameLabel.text = [NSString stringWithFormat:@"@%@", tweet.user.screename];
     
     if ([tweet.didRetweet boolValue] == YES) {
         cell.retweetedLabel.text = @"Retweeted by you";
