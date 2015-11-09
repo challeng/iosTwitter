@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSURL *imageURL;
 @property (nonatomic, strong) NSString *idString;
 @property (nonatomic, strong) NSString *favoriteCount;
+@property (nonatomic, strong) NSString *didRetweet;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

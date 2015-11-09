@@ -76,6 +76,12 @@
     cell.tweetLabel.text = tweet.text;
     cell.userName.text = tweet.user.name;
     
+    if ([tweet.didRetweet boolValue] == YES) {
+        cell.retweetedLabel.text = @"Retweeted by you";
+    } else {
+        cell.retweetedLabel.text = @"Not retweeted";
+    }
+    
     cell.favoriteCountLabel.text = [NSString stringWithFormat:@"%@ favorites", tweet.favoriteCount];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

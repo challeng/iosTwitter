@@ -11,6 +11,7 @@
 #import "TweetsViewController.h"
 #import "User.h"
 #import "UIImageView+AFNetworking.h"
+#import "ReplyTweetViewController.h"
 
 @interface TweetDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -42,7 +43,6 @@
 }
 
 - (IBAction)onFavorite:(id)sender {
-    NSLog(@"Favorite tweet with id = %@", self.tweet.idString);
     [[TwitterClient sharedInstance] favoriteTweetForId:self.tweet.idString completion:^(NSObject *tweet, NSError *error) {
         if (tweet != nil) {
             NSLog(@"favorited");
@@ -51,8 +51,16 @@
     
 }
 - (IBAction)onRetweet:(id)sender {
+    NSLog(@"Retweeting...");
+    [[TwitterClient sharedInstance] retweetForId:self.tweet.idString completion:^(NSObject *tweet, NSError *error) {
+        if (tweet != nil) {
+            NSLog(@"retweeted");
+        }
+    }];
 }
 - (IBAction)onReply:(id)sender {
+    ReplyTweetViewController *vc = [[ReplyTweetViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*

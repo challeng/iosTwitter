@@ -92,7 +92,6 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
 
 
 - (void)favoriteTweetForId:(NSString *)idString completion:(void (^)(NSObject *tweet, NSError *error))completion {
-    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:idString forKey:@"id"];
     
@@ -105,26 +104,30 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
     }];
 }
 
-//- (void)replyTweetWithParams:(NSDictionary *)params completion:(void (^)(NSObject *tweet, NSError *error))completion {
-//    [self POST:@"1.1/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-//        NSObject *tweet = responseObject;
-//        completion(tweet, nil);
-//        
-//    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-//        completion(nil, error);
-//    }];
-//    
-//}
-//
-//- (void)retweetWithParams:(NSDictionary *)params completion:(void (^)(NSObject *tweet, NSError *error))completion {
-//    [self POST:@"1.1/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-//        NSObject *tweet = responseObject;
-//        completion(tweet, nil);
-//        
-//    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-//        completion(nil, error);
-//    }];
-//    
-//}
+- (void)replyTweetWithParams:(NSDictionary *)params completion:(void (^)(NSObject *tweet, NSError *error))completion {
+    [self POST:@"1.1/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        NSObject *tweet = responseObject;
+        completion(tweet, nil);
+        
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        completion(nil, error);
+    }];
+    
+}
+
+- (void)retweetForId:(NSString *)idString completion:(void (^)(NSObject *, NSError *))completion {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:idString forKey:@"id"];
+    NSString *endpoint = [NSString stringWithFormat:@"1.1/statuses/retweet/%@.json", idString];
+    
+    [self POST:endpoint parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        NSObject *tweet = responseObject;
+        completion(tweet, nil);
+        
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        completion(nil, error);
+    }];
+    
+}
 
 @end

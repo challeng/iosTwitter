@@ -19,5 +19,7 @@
 - (void)homeTimelineWithParams:(NSDictionary *)params completion:(void (^)(NSArray *tweets, NSError *error))completion;
 - (void)publishTweetWithParams:(NSDictionary *)params completion:(void (^)(NSObject *tweet, NSError *error))completion;
 - (void)favoriteTweetForId:(NSString *)idString completion:(void (^)(NSObject *tweet, NSError *error))completion;
+- (void)retweetForId:(NSString *)idString completion:(void (^)(NSObject *tweet, NSError *error))completion;
+- (void)replyTweetWithParams:(NSDictionary *)params completion:(void (^)(NSObject *tweet, NSError *error))completion;
 
 @end
